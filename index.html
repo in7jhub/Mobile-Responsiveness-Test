@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xml:lang>
+<head>
+	<title>Oddmail Softworks</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<meta property="og:title" content="Oddmail Softworks">
+	<meta name="description" content="게임으로 만들어가는 사람들"/>
+    <meta name="author" content="Oddmail"/>
+
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="게임으로 만들어가는 사람들">
+	<!-- <meta property="og:image" content="https://in7jhub.github.io/Wishtree/assets/Page/og.jpg"> -->
+	<!-- <meta property="og:url" content="https://in7jhub.github.io/Wishtree/"> -->
+
+	<!-- 대표 데스크톱 URL -->
+	<!-- <link rel="canonical" href="https://in7jhub.github.io/Wishtree/"> -->
+	<!-- 모바일 URL -->
+	<!-- <link rel="alternate" href="https://in7jhub.github.io/Wishtree/m/"> -->
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+	<meta name="keywords" content="오드메일">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>    
+
+	<!-- 파비콘이 있던 자리 -->
+
+	<!-- Prevent Drag Copy -->
+	<script type="text/javascript">
+			var omitformtags=["input", "textarea", "select"]
+			omitformtags=omitformtags.join("|")
+			function disableselect(e){
+					if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1){
+						return false
+					}
+					function reEnable(){
+						return true
+					}
+					if (typeof document.onselectstart!="undefined"){
+						document.onselectstart=new Function ("return false")
+					} else {
+						document.onmousedown=disableselect
+						document.onmouseup=reEnable
+					}
+			}
+	</script>
+
+	<!-- Sound control according to the amount of scrolling  -->
+	<!-- <script>
+		let sound = new Array(5);
+		let scroll_amount;
+		let volume_inc = 0.001;
+		var chapter_1_volume = 0;
+
+		for(let i = 0; i < 4; i++){
+				sound[i] = new Audio('assets/audio/chapter_'+(i+1)+'.ogg');
+				sound[i].volume = 0;
+				sound[i].loop = true;
+		}
+		sound[4] = new Audio('assets/audio/rain2.ogg');
+		sound[4].volume = 0;
+		sound[4].loop = true;
+	</script> -->
+	<!-- <script src="js/p5.js/canvas.js"></script> -->
+</head>
+
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+    <!-- positions of all triggers -->
+    <div id="white_bg" style="position: absolute; top:0px; width: 100vw; height: 300vh; background-color: black;"></div>
+    <div id="trigger" style="position: absolute; top: 2400px; width: 100%; height:100px; background: #000;"></div>
+    <div style="position: absolute; top: 5400px; width: 100%; height:100px; background: #000;"></div>
+    <!-- triggers end -->
+
+    <!--애니메이션 파일을 불러오는 순서는 반드시 플러그인 이후여야 함-->
+    <script src="Library/scrollMagicAnimation.js"></script> 
+
+    <script>
+        $(document).keydown(function(event) {
+        if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,29 @@
+* {
+  word-break: break-all;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin-bottom: 320px;
+  scrollbar-width: none; /* safari and chromium */
+
+  /* overflow-x: hidden; /*firefox*/ 
+  /* overflow-y: auto; */
+}
+body {
+  margin-bottom: 320px;
+  -webkit-user-select: none !important; /*드래그 방지*/
+  -moz-user-select: -moz-none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+} /* Optional: show position indicator in red */
