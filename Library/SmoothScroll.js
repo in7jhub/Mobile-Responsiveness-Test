@@ -101,7 +101,7 @@ class SmoothScroll {
 }
 
 const params = {
-  duration: 1000,
+  duration: 800,
   timingFunction: 'cubic-bezier(0.19, 1, 0.22, 1)'
 }
 
