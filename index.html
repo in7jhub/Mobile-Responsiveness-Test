@@ -37,6 +37,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
 
+
+	<script src="Library/SmoothScroll.min.js"></script>
+	<link rel="stylesheet" href="css/SmoothScroll.css">
+    <link rel="stylesheet" href="css/content.css">
+
 	<!-- 파비콘이 있던 자리 -->
 
 	<!-- Prevent Drag Copy -->
@@ -81,13 +86,59 @@
 <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
     <!-- positions of all triggers -->
     <div style="position: fixed; top:0px; left:0px; width: 100vw; height:100vh; background: #000;"></div>
-    <div id="white_bg" style="position: fixed; top:-10vh; left:-10vw; width: 120vw; height: 120vh; background-image: url(Image/WhiteDot.jpg); background-size: cover;"></div>
+    <div id="white_bg" style="position: fixed; top:-10vh; left:-10vw; width: 120vw; height: 120vh; background-size: cover;"></div>
     <div id="trigger" style="position: absolute; top: 2400px; width: 100%; height:100px; background: blue;"></div>
     <div id="expender" style="position: absolute; top: 6000px; width: 100vw; height:30px;"></div>
     <!-- triggers end -->
 
     <!--애니메이션 파일을 불러오는 순서는 반드시 플러그인 이후여야 함-->
     <script src="Library/scrollMagicAnimation.js"></script> 
+
+	<div class="viewport">
+		<div class="container">
+		<h1>SmoothScroll.js</h1>
+		<p style="font-size: 1em;">
+			SmoothScroll.js is 100% using vanilla javaScript smooth scroll. No
+			libraries, no frameworks, and it's only 3kb.
+		</p>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		</div>
+	</div>
 
     <script>
         $(document).keydown(function(event) {
@@ -96,5 +147,9 @@
             }
         });
     </script>
+
+
+	<script src="Library/SmoothScroll.min.js"></script>
+    <script src="Library/script.js"></script>
 </body>
 </html> 
