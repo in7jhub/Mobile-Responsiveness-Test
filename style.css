@@ -37,6 +37,7 @@ body {
   background: transparent; /* Optional: just make scrollbar invisible */
 } /* Optional: show position indicator in red */
 
+
 @media (prefers-color-scheme: dark) {
   /* Your CSS */
 }
