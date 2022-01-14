@@ -1,161 +1,114 @@
-* {
-  word-break: break-all;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* 폰트 ------------------------------*/
+@font-face {
+  font-family: 'Pleasantly Plump';
+  src:url('Font/Pleasantly-Plump.TTF') format('truetype'),
+      url('Font/Pleasantly-Plump.woff') format('woff'),
+      url('Font/Pleasantly-Plump.svg#Pleasantly-Plump') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-
-.SmoothScroll {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-}
+/* 폰트(끝) ------------------------------ */
 
 .container {
+  position: relative;
   width: 100vw;
+  min-width: 300px;
+  margin: 0 auto;
+  justify-content: center;
+  height:3000px;
 }
 
-div {
-  position:absolute;
+.viewport {
+  width: 100%;
+  margin: 0 auto;
 }
+
 html {
-  text-align:center;
-
-  margin-bottom: 320px;
   scrollbar-width: none; /* safari and chromium */
-
-  /* overflow-x: hidden; /*firefox*/ 
-  /* overflow-y: auto; */
+  overflow-x: hidden; /*firefox*/
+  overflow-y: auto;
 }
+
 body {
-  margin-bottom: 320px;
   -webkit-user-select: none !important; /*드래그 방지*/
   -moz-user-select: -moz-none !important;
   -ms-user-select: none !important;
   user-select: none !important;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  background-color: #111;
-  font-family: "Signika Negative", sans-serif, Arial;
+  background-color: rgb(51, 66, 94);
 }
 
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
-} /* Optional: show position indicator in red */
-
-
-@media (prefers-color-scheme: dark) {
-  /* Your CSS */
 }
 
-.block {
-  min-width: 280px;
-  position: relative;
-  /* width: calc(30vw - 40px); */
-  flex: 1;
-  min-height: 200px;
-  height: 14vw;
-  /* background-color: lightgrey; */
-  outline: 1px solid blue;
-  background:
-    linear-gradient(to top right, transparent 49.9%, lightgrey 49.9%,lightgrey 50.1%, transparent 50.1%),
-    linear-gradient(to bottom right,transparent 49.9%, lightgrey 49.9%,lightgrey 50.1%, transparent 50.1%);
-  margin: 20px;
+/* 메인 영역 모든 화면크기 공통 ------------------------*/
+.titleText {
+  width: 100vw;
+  text-align: center;
+  font-family: 'Pleasantly Plump', sans-serif;
+  color: rgb(228, 236, 241);
 }
 
-.smoothScrollWrapper{
-  width: 100%;
+#mainImg {
   margin: 0 auto;
+  background-image: url('Image/mainImg.png');
+  background-size: 100% 100%;
+}
+/* 메인 영역 모든 화면크기 공통(끝) ------------------------*/
+
+p {
+  margin-top: 0;
+  padding: 20px;
+  font-size: 70px;
+  opacity: .6;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
-#viewport {
-  overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#content {
-  overflow: visible;
-  width: 100%;
-  /* set a height because the contents are position: absolute, thus natively there's no height */
-  height: 2400px;
-  
-  background-image:
-    linear-gradient(rgba(255,255,255,.07) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(255,255,255,.07) 2px, transparent 2px),
-    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-}
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: #28a92b;
-  position: absolute;
-  left: 300px;
-  z-index: 100;
-  line-height: 100px;
-  font-size: 10px;
-  text-align: center;
-}
-.box.active {
-  background-color: red;
-}
-
-.box-a {
-  top: 200px;
-  background-color: #8d3dae;
-}
-
-.box-b {
-  top: 600px;
-}
-
-.box-c {
-  top: 1000px;
-  background-color: #e26c16;
-}
-
-.line {
-  visibility: hidden;
-  width: 2px;
-  height: 3000px;
-  position: absolute;
-  left: 400px;
-  top: 0px;
-  background-color: #777;
-}
-
-header .name {
-  color: white;
-}
-
-.title {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-weight: 400;
-  font-size: 12px;
-}
-header {
-  position: fixed;
-  right: 0px;
-  bottom: 0px;
-  padding: 6px 10px 10px 12px;
-  border-top-left-radius: 26px;
-  z-index: 100;
-  background-color: rgba(0,0,0,0.5);
+/* PC (해상도 1024px)*/ 
+@media all and (min-width:1024px) {
+  .titleText{
+    position: relative;
+    font-size: 5rem;
+    transform: translate(-50%,-200px);
+    top: 50vh;
+    left: 50vw;
+  }
+  #mainImg{
+    position: relative;
+    width:312px;
+    height:171px;
+    transform: translateY(-200px);
+    top: 50vh;
+  }
+} 
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) {
+  .titleText{
+    position: relative;
+    font-size: 3.5rem;
+    top: 50vh;
+    left: 50vw;
+    transform: translateY(-200px);
+  }
+  #mainImg{
+    position: relative;
+    width:312px;
+    height:171px;
+  }
+} 
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+  .titleText{
+    position: relative;
+    font-size: 3rem;
+    top: 4rem;
+  }
+  #mainImg{
+    position: relative;
+    width:312px;
+    height:171px;
+  }
 }

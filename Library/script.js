@@ -29,7 +29,7 @@ function smoothScroll() {
 
   new SmoothScroll({
     target: document.querySelector('.container'),
-    scrollEase: 0.08,
+    scrollEase: 0.05,
     maxOffset: 500,
   });
 }
