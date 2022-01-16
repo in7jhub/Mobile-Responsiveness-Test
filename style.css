@@ -10,6 +10,18 @@
 }
 /* 폰트(끝) ------------------------------ */
 
+/* 노말라이즈 ------------------------*/
+body, ul, li, h1, h2, h3 {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
 .container {
   position: relative;
   width: 100vw;
@@ -31,17 +43,19 @@ html {
 }
 
 body {
+  margin: 0 auto;
   -webkit-user-select: none !important; /*드래그 방지*/
   -moz-user-select: -moz-none !important;
   -ms-user-select: none !important;
   user-select: none !important;
-  background-color: rgb(51, 66, 94);
+  background-color: #0d0e16;
 }
 
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }
+/* 노말라이즈(끝) ------------------------*/
 
 /* 메인 영역 모든 화면크기 공통 ------------------------*/
 .titleText {
@@ -49,8 +63,7 @@ body {
   width: 100vw;
   text-align: center;
   font-family: 'Pleasantly Plump', sans-serif;
-  color: rgb(228, 236, 241);
-  transform: translate(-50%,50%);
+  color: #eaecda;
   top: 50vh;
   left: 50vw;
 }
@@ -62,7 +75,27 @@ body {
   background-size: 100% 100%;
   top: 50vh;
 }
-/* 메인 영역 모든 화면크기 공통(끝) ------------------------*/
+
+#gotoTopButton{
+  position:fixed;
+  top:100vh;
+  left:100vw;
+  margin:0 auto;
+  background-image: url('Image/toTopButton.png');
+  background-size: 100% 100%;
+  transform: translate(-120%, -130%);
+}
+/* 메인 영역 모든 화면크기 공통(끝) -----------------------------*/
+
+/* 화면 크기 조건부 표현(display: none 등이 사용되는) -----------*/
+#top-bar {
+  position: fixed;
+  top:0px;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: #1b1f2b;
+}
+/* 화면 크기 조건부 표현(끝) ------------------------------------*/
 
 p {
   margin-top: 0;
@@ -76,13 +109,18 @@ p {
 /* PC (해상도 1024px)*/ 
 @media all and (min-width:1024px) {
   .titleText{
-    font-size: 5rem;
+    font-size: 6rem;
     transform: translate(-50%,0px);
   }
   #mainImg{
     width:312px;
     height:171px;
-    transform: translateY(-280px);
+    transform: translateY(-300px);
+  }
+  #gotoTopButton{
+    width: 100px;
+    height: 100px;
+    left: 80vw;
   }
 }
 
@@ -90,12 +128,19 @@ p {
 @media all and (min-width:768px) and (max-width:1023px) {
   .titleText{
     font-size: 3.5rem;
-    transform: translate(-50%,50px);
+    transform: translate(-50%,25px);
   }
   #mainImg{
-    width:312px;
-    height:171px;
-    transform: translateY(-200px);
+    width:230px;
+    height:130px;
+    transform: translateY(-180px);
+  }
+  #top-bar{
+    height: 50px;
+  }
+  #gotoTopButton{
+    width: 80px;
+    height: 80px;
   }
 } 
 
@@ -103,12 +148,19 @@ p {
 @media all and (max-width:767px) {
   .titleText{
     font-size: 2rem;
-    top: 4rem;
-    /* transform: translateY(0px); */
+    top: 14.3rem;
+    transform: translate(-50%,25px);
   }
   #mainImg{
     width:168px;
     height:91px;
-    top: 100px;
+    top: 120px;
+  }
+  #top-bar {
+    height: 50px;
+  }
+  #gotoTopButton{
+    width: 60px;
+    height: 60px;
   }
 }
