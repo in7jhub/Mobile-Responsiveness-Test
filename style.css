@@ -45,16 +45,22 @@ body {
 
 /* 메인 영역 모든 화면크기 공통 ------------------------*/
 .titleText {
+  position: relative;
   width: 100vw;
   text-align: center;
   font-family: 'Pleasantly Plump', sans-serif;
   color: rgb(228, 236, 241);
+  transform: translate(-50%,50%);
+  top: 50vh;
+  left: 50vw;
 }
 
 #mainImg {
+  position: relative;
   margin: 0 auto;
   background-image: url('Image/mainImg.png');
   background-size: 100% 100%;
+  top: 50vh;
 }
 /* 메인 영역 모든 화면크기 공통(끝) ------------------------*/
 
@@ -70,45 +76,39 @@ p {
 /* PC (해상도 1024px)*/ 
 @media all and (min-width:1024px) {
   .titleText{
-    position: relative;
     font-size: 5rem;
-    transform: translate(-50%,-200px);
-    top: 50vh;
-    left: 50vw;
+    transform: translate(-50%,0px);
   }
   #mainImg{
-    position: relative;
     width:312px;
     height:171px;
-    transform: translateY(-200px);
-    top: 50vh;
+    transform: translateY(-280px);
   }
-} 
+}
+
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
 @media all and (min-width:768px) and (max-width:1023px) {
   .titleText{
-    position: relative;
     font-size: 3.5rem;
-    top: 50vh;
-    left: 50vw;
-    transform: translateY(-200px);
+    transform: translate(-50%,50px);
   }
   #mainImg{
-    position: relative;
     width:312px;
     height:171px;
+    transform: translateY(-200px);
   }
 } 
+
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
 @media all and (max-width:767px) {
   .titleText{
-    position: relative;
-    font-size: 3rem;
+    font-size: 2rem;
     top: 4rem;
+    /* transform: translateY(0px); */
   }
   #mainImg{
-    position: relative;
-    width:312px;
-    height:171px;
+    width:168px;
+    height:91px;
+    top: 100px;
   }
 }
