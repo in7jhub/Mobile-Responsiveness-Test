@@ -86,15 +86,14 @@ body {
   transform: translate(-120%, -130%);
 }
 
-#contentSpace {
-  width:70vw;
-  height: 3000px;
-  margin:0 auto;
-  background-color: rgba(255,255,255,0.1);
+.item{
+  background: rgba(255,0,0,0.2);
 }
 
-#contentSpace-Grid {
-  
+.grid-container{
+  position: relative;
+  display: grid;
+  margin: 0 auto;
 }
 /* 메인 영역 모든 화면크기 공통(끝) -----------------------------*/
 
@@ -132,6 +131,19 @@ p {
     width: 100px;
     height: 100px;
   }
+  .grid-container{ 
+    /* 컬럼 74px 12개 */
+    /* 거터(=마진) 24px 13개 */
+    max-width: 1152px;
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* 전체 너비 할당 */
+    grid-auto-columns: 74px; /* 전체 높이 할당 */
+    grid-auto-rows: 74px;
+    grid-gap: 24px;
+    background: rgba(25,25,255,0.1);
+    top: 400px;
+  }
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
@@ -153,7 +165,28 @@ p {
     height: 80px;
   }
   #contentSpace{
-    width: 80%;
+    width: 768px;
+  }
+  #gutterIndicator{
+    width: 20px;
+  }
+  #sideMargin{
+    width: 24px;
+  }
+  .grid-container{ 
+    /* 컬럼 95px 6개 */
+    /* 거터 20px 5개 */
+    /* 마진 25px 양쪽 */
+    /* 컨테이너 720px */
+    max-width: 670px;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 전체 너비 할당 */
+    grid-auto-columns: 95px; /* 전체 높이 할당 */
+    grid-auto-rows: 95px;
+    grid-gap: 20px;
+    background: rgba(25,25,255,0.1);
+    top: 500px;
   }
 } 
 
@@ -177,6 +210,28 @@ p {
     height: 60px;
   }
   #contentSpace{
+    max-width: 360px;
     width: 90%;
+  }
+  #gutterIndicator{
+    width: 16px;
+  }
+  #sideMargin{
+    width: 20px;
+  }
+  .grid-container{ 
+    /* 컬럼 68px 4개 */
+    /* 거터 16px 3개 */
+    /* 마진 20px 양쪽 */
+    /* 컨테이너 360px */
+    max-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 전체 너비 할당 */
+    grid-auto-columns: 68px; /* 전체 높이 할당 */
+    grid-auto-rows: 68px;
+    grid-gap: 16px;
+    background: rgba(25,25,255,0.1);
+    top: 300px;
   }
 }
