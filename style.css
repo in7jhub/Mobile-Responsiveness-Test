@@ -65,7 +65,7 @@ body {
   font-family: 'Pleasantly Plump', sans-serif;
   color: #eaecda;
   top: 50vh;
-  left: 50vw;
+  left: 50%;
 }
 
 #mainImg {
@@ -76,7 +76,7 @@ body {
   top: 50vh;
 }
 
-#gotoTopButton{
+#gotoTopButton {
   position:fixed;
   top:100vh;
   left:100vw;
@@ -84,6 +84,17 @@ body {
   background-image: url('Image/toTopButton.png');
   background-size: 100% 100%;
   transform: translate(-120%, -130%);
+}
+
+#contentSpace {
+  width:70vw;
+  height: 3000px;
+  margin:0 auto;
+  background-color: rgba(255,255,255,0.1);
+}
+
+#contentSpace-Grid {
+  
 }
 /* 메인 영역 모든 화면크기 공통(끝) -----------------------------*/
 
@@ -115,7 +126,7 @@ p {
   #mainImg{
     width:312px;
     height:171px;
-    transform: translateY(-300px);
+    transform: translateY(-285px);
   }
   #gotoTopButton{
     width: 100px;
@@ -132,7 +143,7 @@ p {
   #mainImg{
     width:230px;
     height:130px;
-    transform: translateY(-180px);
+    transform: translateY(-170px);
   }
   #top-bar{
     height: 60px;
@@ -140,6 +151,9 @@ p {
   #gotoTopButton{
     width: 80px;
     height: 80px;
+  }
+  #contentSpace{
+    width: 80%;
   }
 } 
 
@@ -153,7 +167,7 @@ p {
   #mainImg{
     width:168px;
     height:91px;
-    top: 120px;
+    top: 128px;
   }
   #top-bar {
     height: 50px;
@@ -161,5 +175,8 @@ p {
   #gotoTopButton{
     width: 60px;
     height: 60px;
+  }
+  #contentSpace{
+    width: 90%;
   }
 }
