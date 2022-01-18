@@ -78,7 +78,7 @@ body {
 
 #gotoTopButton {
   position:fixed;
-  top:100vh;
+  top:calc(var(--vh, 1vh)*100);
   left:100vw;
   margin:0 auto;
   background-image: url('Image/toTopButton.png');
