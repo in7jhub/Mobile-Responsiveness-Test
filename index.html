@@ -2,7 +2,8 @@
 <html xml:lang>
 <head>
 	<title>Oddmail Softworks</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<link href="debugButton.css" rel="stylesheet" type="text/css"/>
 	<meta property="og:title" content="Oddmail Softworks">
 	<meta name="description" content="게임으로 만들어가는 사람들"/>
     <meta name="author" content="Oddmail"/>
@@ -35,11 +36,6 @@
 </head>
 
 <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
-<script></script>
-<button style="position: fixed" onclick="toggleContentSpaceGrid()">
-	toggleContentSpaceGrid
-</button>
-
 <div class="viewport">
 <div class="container">
 	<div class="titleText">ODDMAIL</div>
@@ -82,6 +78,7 @@
 		<div class="item"></div>
 		<div class="item"></div>
 	</div>
+	
 </div><!--container(smoothScroll)-->
 </div> <!--Viewport(smoothScroll)-->
 
@@ -90,7 +87,22 @@
 <script src="Library/script.js"></script>
 <script src="Library/mobile_vh.js"></script>
 <div id="top-bar"></div>
-<div id="gotoTopButton"></div>
 
+<label class="switch" style="position: fixed; left:10px; top:10px;">
+	<input type="checkbox">
+	<span class="slider round"></span>
+</label>
+<div id="gotoTopButton"></div>
+<script>
+	var check = $("input[type='checkbox']");
+	$(".item").css("display", "none");
+	check.click(function (){
+		if(check.is(':checked')){
+			$(".item").css("display", "block");
+		} else {
+			$(".item").css("display", "none");
+		}
+	});
+</script>
 </body>
 </html> 
