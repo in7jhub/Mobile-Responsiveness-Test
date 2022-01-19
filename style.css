@@ -134,7 +134,9 @@ p {
   }
   .grid-container{ 
     /* 컬럼 74px 12개 */
-    /* 거터(=마진) 24px 13개 */
+    /* 거터 24px 5개 */
+    /* 마진 24px 양쪽 */
+    /* 컨테이너 1200px */
     max-width: 1152px;
     padding-left: 24px;
     padding-right: 24px;
@@ -175,17 +177,17 @@ p {
     width: 24px;
   }
   .grid-container{ 
-    /* 컬럼 95px 6개 */
-    /* 거터 20px 5개 */
-    /* 마진 25px 양쪽 */
-    /* 컨테이너 720px */
-    max-width: 670px;
-    padding-left: 25px;
-    padding-right: 25px;
+    /* 컬럼 119px 6개 */
+    /* 거터 30px 5개 */
+    /* 마진 23px 양쪽 */
+    /* 컨테이너 910px */
+    max-width: 864px;
+    padding-left: 23px;
+    padding-right: 23px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 전체 너비 할당 */
-    grid-auto-columns: 95px; /* 전체 높이 할당 */
-    grid-auto-rows: 95px;
-    grid-gap: 20px;
+    grid-auto-columns: 119px; /* 전체 높이 할당 */
+    grid-auto-rows: 119px;
+    grid-gap: 30px;
     background: rgba(25,25,255,0.1);
     top: 500px;
   }
@@ -221,17 +223,17 @@ p {
     width: 20px;
   }
   .grid-container{ 
-    /* 컬럼 68px 4개 */
-    /* 거터 16px 3개 */
-    /* 마진 20px 양쪽 */
-    /* 컨테이너 360px */
-    max-width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* 컬럼 132px 4개 */
+    /* 거터 14px 3개 */
+    /* 마진 15px 양쪽 */
+    /* 컨테이너 600px */
+    max-width: 570px;
+    padding-left: 15px;
+    padding-right: 15px;
     grid-template-columns: 1fr 1fr 1fr 1fr; /* 전체 너비 할당 */
-    grid-auto-columns: 68px; /* 전체 높이 할당 */
-    grid-auto-rows: 68px;
-    grid-gap: 16px;
+    grid-auto-columns: 132px; /* 전체 높이 할당 */
+    grid-auto-rows: 132px;
+    grid-gap: 14px;
     background: rgba(25,25,255,0.1);
     top: 300px;
   }
